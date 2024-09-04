@@ -64,7 +64,7 @@ const Home = () => {
             )}
         </div>
         {showBrand && (
-            <motion.h1 className="absolute bottom-1 left-1 flex gap-1 items-center rajdhani-semibold text-sm font-bold text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 2 }}>
+            <motion.h1 className="fixed bottom-1 left-1 flex gap-1 items-center rajdhani-semibold text-sm font-bold text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 2 }}>
             Made with <FaHeart className='text-cyan-500'/> by Prashant
             </motion.h1>
         )}
