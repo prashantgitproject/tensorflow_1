@@ -13,11 +13,13 @@ const VisionDetector = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [showWebCam, setShowWebCam] = useState(false);
+  const [loadModel, setLoadModel] = useState(false);
 
   // Main function
   const runCoco = async () => {
     const net = await cocossd.load();
     console.log("Handpose model loaded.");
+    setLoadModel(true);
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
@@ -73,6 +75,8 @@ const VisionDetector = () => {
           <canvas className="absolute z-20 left-1 right-1 top-2 mx-auto text-center w-[95vw] h-[65vh] md:w-fit md:h-[60vh] rounded-lg"
             ref={canvasRef}
           />
+
+          <h2 className="rajdhani-medium text-sm text-gray-500 text-center my-2">{loadModel ? 'Model Loaded!' : 'Please wait model is being loaded...'}</h2>
         </div>
       )}
 
