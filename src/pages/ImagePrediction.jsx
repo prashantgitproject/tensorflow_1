@@ -6,6 +6,7 @@ import Loader from '../components/Loader';
 import AnimatedCounter from '../components/AnimatedCounter';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import AiLoader from '../components/AILoader';
 
 const ImagePrediction = () => {
 
@@ -60,7 +61,7 @@ const ImagePrediction = () => {
   return (
     <div className='bg-gray-900'>
     {url && <img className='hidden' src={url} alt="image" ref={imageRef} />}
-    {isLoading ? <Loader/> : (
+    {isLoading ? <AiLoader/> : (
       <>
             {predictions ? (
               <div className='md:h-screen bg-gray-900'>

@@ -48,4 +48,45 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+
+  
+
+  
+  .fade{
+    animation: fade 3s linear infinite;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  .spinner {
+    animation: spins 0.5s linear infinite;
+  }
+  .spinner1 {
+    animation: spins 0.5s linear infinite;
+  }
+  .spinner2 {
+    animation: spins 0.5s linear infinite;
+  }
+  .spinner3 {
+    animation: spins 0.5s linear infinite;
+  }
+  
+  @keyframes spins {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   
